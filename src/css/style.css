@@ -1,0 +1,29 @@
+button {
+    margin: 5px;
+}
+
+.cellSection {
+    cursor: url('/src/img/molot.png'), auto;
+}
+
+.gameField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cellSection {
+    height: 496px;
+    width: 496px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.cell {
+    box-sizing: border-box;
+    height: 124px;
+    width: 124px;
+    background-color: red;
+    border: 1px solid black;    
+}
