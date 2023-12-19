@@ -3430,7 +3430,7 @@ html-minifier-terser@^6.0.2:
     relateurl "^0.2.7"
     terser "^5.10.0"
 
-html-minifier-terser@^7.0.0:
+html-minifier-terser@^7.0.0, html-minifier-terser@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/html-minifier-terser/-/html-minifier-terser-7.2.0.tgz#18752e23a2f0ed4b0f550f217bb41693e975b942"
   integrity sha512-tXgn3QfqPIpGl9o+K5tpcj3/MN4SfLtsx2GWwBC3SSd0tXQGyF3gsSqad8loJgKZGM3ZxbYDd5yhiBIdWpmvLA==
