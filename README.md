@@ -1,2 +1,4 @@
+# Webpack5
 
-[![Build status](https://ci.appveyor.com/api/projects/status/hveygxxchhwq6xay?svg=true)](https://ci.appveyor.com/project/sonic-wave/events)
+[Руководство по настройке Webpack](https://webpack.js.org/guides/)
+[Руководство по настройке GitHub Actions](https://docs.github.com/en/actions/quickstart)
