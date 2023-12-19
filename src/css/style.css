@@ -2,8 +2,11 @@ button {
     margin: 5px;
 }
 
-.cellSection {
-    cursor: url('/src/img/molot.png'), auto;
+.goblinImage {
+    background-image: url('/src/img/goblin.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .gameField {
@@ -18,6 +21,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
+    cursor: url('/src/img/molot.png'), auto;
 }
 
 .cell {

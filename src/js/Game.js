@@ -13,7 +13,6 @@ export default class Game {
     }
 
     init() {
-        this.goblinImage = this.goblinImageCreate();
         this.restart = false;
         this.hammerSmash();      
         this.bindButtons();
@@ -44,32 +43,32 @@ export default class Game {
         this.healthText.textContent = this.health;
 
         this.interval = setInterval(() => {
+          
+        if (this.listener === false) {
+            this.removeGoblin()
+        }
+
             if (!this.numArray.length) {
               this.numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
             }
             this.random();
-            this.temp = this.numArray[this.randomNum];
-            this.numArray = this.numArray.filter((element) => element !== this.temp);
-            this.goblin[this.temp].appendChild(this.goblinImage);
+
             this.checkListener();
             this.checkHealth();
-          }, 1000);
+          }, 2000);
     }
 
     random() {
         this.randomNum = Math.floor(Math.random() * this.numArray.length);
+        this.temp = this.numArray[this.randomNum];
+        this.numArray = this.numArray.filter((element) => element !== this.temp);
+        this.goblin[this.temp].classList.add('goblinImage');
     }
 
     removeGoblin() {
         if(this.goblin[this.temp]) {
-            this.goblin[this.temp].removeChild(this.goblinImage);
+            this.goblin[this.temp].classList.remove('goblinImage');;
         }
-    }
-
-    goblinImageCreate() {
-        const goblinImage = document.createElement('img');
-        goblinImage.src = '/src/img/goblin.png';
-        return goblinImage;
     }
 
     hammerSmash() {
@@ -79,10 +78,11 @@ export default class Game {
                 alert('Игра окончена');
               }
 
-            if (element.contains(this.goblinImage)) {
+            if (element.classList.contains('goblinImage')) {
                 this.score += 1;
                 this.scoreText.textContent = this.score;
                 this.listener = true;
+                this.removeGoblin();
               } 
             else {
               this.health -= 1;
